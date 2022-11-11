@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            background-color:rgb(198, 192, 204);
+        }
+        .tab-label {
+           background-color: rgb(238, 216, 20); 
+        }
+        .tabcontent {
+            background-color: rgb(136, 194, 248);
+            max-height: 0px;
+            overflow: hidden;
+            padding:  0 1em;
+            transition: all 0.4s;
+        }
+        input{
+            display:none;
+        }
+
+        input:checked ~ .tabcontent {
+            max-height: 100vh;
+            padding:  1em;
+        }
+        .tab-label::after{
+            content: "\203A";
+            font-size: 1.0em;
+            font-weight: bold;
+            transition: all 0.4s;
+        }
+        .tab-label {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em;
+            font-weight: bold;
+        }
+        input:checked ~ label .tab-label::after {
+            transform:rotate(90deg);
+        }
+        .tab {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="tab">
+   <input type="checkbox" id = "tab-1"> 
+    <label for="tab-1">
+        <div class = "tab-label">tab 1</div>
+    </label>
+ 
+  <div class="tabcontent">
+   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident, molestias! Pariatur explicabo earum sunt ducimus, obcaecati laudantium. Eligendi voluptas pariatur, ad temporibus doloribus iure quibusdam facere quae nostrum! Eveniet, culpa!
+</div>
+</div> 
+  
+</html>
